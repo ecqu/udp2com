@@ -22,18 +22,7 @@ while True:
 	data, addr = sock.recvfrom(512)
 
 	outsim_pack = struct.unpack('64f', data[0:256])
-	print outsim_pack
-	for id, value in enumerate(outsim_pack):
-		print "%d : %s" % (id, value)
+	print "%s %s %s %s %s %s" %(otsim_pack[11-17])
+#	for id, value in enumerate(outsim_pack):
+#		print "%d : %s" % (id, value)
 
-#	a = 33
-#	blob = blocs[(a*4):4+(a*4)]
-#	print blob
-
-#for line in filek:
-#	if len(line) > 20:
-#		bloky=line.split(" ")
-##		for a in range (0,66):
-#		a = 33
-#		blob = bloky[(a*4):4+(a*4)]
-#		print a, blob
