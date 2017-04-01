@@ -4,7 +4,7 @@
 # Res andy
 
 
-import os, re, socket
+import os, re, socket, struct
 
 DIRT_IP = "127.0.0.1"
 DIRT_PORT = 20777
@@ -15,7 +15,7 @@ sock.bind((DIRT_IP, DIRT_PORT))
 #print "UDP MON RDY @", DIRT_IP, ":", DIRT_PORT
 
 
-filek = open("dump.txt","r").read().split("\n")
+#filek = open("dump.txt","r").read().split("\n")
 
 
 while True:
