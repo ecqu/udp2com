@@ -22,6 +22,7 @@ while True:
 	data, addr = sock.recvfrom(512)
 
 	outsim_pack = struct.unpack('64f', data[0:256])
+	print outsim_pack
 	for id, value in enumerate(outsim_pack):
 		print "%d : %s" % (id, value)
 
