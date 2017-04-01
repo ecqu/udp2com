@@ -10,4 +10,4 @@ print "UDP MON RDY @", DIRT_IP, ":", DIRT_PORT
 
 while True:
 	data, addr = sock.recvfrom(512)
-	print data
+	print data.split( )
