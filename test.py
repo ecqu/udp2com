@@ -19,15 +19,15 @@ filek = open("dump.txt","r").read().split("\n")
 
 
 while True:
-	data, addr = sock.recvfrom(4096)
+	data, addr = sock.recvfrom(512)
 
-	output = ""
-	for letter in data:
-		output += "%s " % (ord(letter))
-	blocs = output.split(" ")
-	a = 33
-	blob = blocs[(a*4):4+(a*4)]
-	print blob
+	outsim_pack = struct.unpack('64f', data[0:256])
+	for id, value in enumerate(outsim_pack):
+		print "%d : %s" % (id, value)
+
+#	a = 33
+#	blob = blocs[(a*4):4+(a*4)]
+#	print blob
 
 #for line in filek:
 #	if len(line) > 20:
